@@ -31,7 +31,17 @@
     <img id="ferris" src="Full_Sleep.png" width="50" />
     <img id="ferris" src="Half_Sleep.png" width="50" />
     <img id="ferris" src="Empty_Sleep.png" width="50" />
-    <script>
+    <script>setInterval(myMethod, 5000);
+
+    function myMethod( )
+    {
+                      const ferris = document.getElementById("ferris")
+                ferris.classList.add("rotate")
+                setTimeout(() => {
+                    ferris.classList.remove("rotate")
+                }, 1000)
+    }
+        
         ComfyJS.onCommand = (user, command, message, flags, extra) => {
             if (command === "yeeclaw") {
                 const ferris = document.getElementById("ferris")
