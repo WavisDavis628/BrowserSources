@@ -48,13 +48,13 @@
     <img id="bed10" src="Full_Sleep.png" width="50" />
     <script>
         
-        setInterval(myMethod, 500);
+        setInterval(myMethod, 5000);
         function myMethod( ) {
                 const ferris = document.getElementById("food1")
                 ferris.classList.add("rotate")
                 setTimeout(() => {
                     ferris.classList.remove("rotate")
-                }, 500)
+                }, 5000)
         }
         
         ComfyJS.onCommand = (user, command, message, flags, extra) => {
