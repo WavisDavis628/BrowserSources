@@ -10,6 +10,7 @@
         .rotate {
             animation: rotation 1s 1 linear;
         }
+        
 
         @keyframes rotation {
             from {
@@ -23,37 +24,40 @@
     </style>
 </head>
 <body>
-    <!--<img id="ferris" src="https://mario.wiki.gallery/images/a/a1/Boo_CTTT.png" width="200" />-->
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
-    <img id="ferris" src="Full_Hunger.png" width="50" />
+
+    <img id="food1" src="Full_Hunger.png" width="50" />
+    <img id="food2" src="Full_Hunger.png" width="50" />
+    <img id="food3" src="Full_Hunger.png" width="50" />
+    <img id="food4" src="Full_Hunger.png" width="50" />
+    <img id="food5" src="Full_Hunger.png" width="50" />
+    <img id="food6" src="Full_Hunger.png" width="50" />
+    <img id="food7" src="Full_Hunger.png" width="50" />
+    <img id="food8" src="Full_Hunger.png" width="50" />
+    <img id="food9" src="Full_Hunger.png" width="50" />
+    <img id="food10" src="Full_Hunger.png" width="50" />
     <br>
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <img id="ferris" src="Full_Sleep.png" width="50" />
-    <script>setInterval(myMethod, 5000);
+    <img id="bed1" src="Full_Sleep.png" width="50" />
+    <img id="bed2" src="Full_Sleep.png" width="50" />
+    <img id="bed3" src="Full_Sleep.png" width="50" />
+    <img id="bed4" src="Full_Sleep.png" width="50" />
+    <img id="bed5" src="Full_Sleep.png" width="50" />
+    <img id="bed6" src="Full_Sleep.png" width="50" />
+    <img id="bed7" src="Full_Sleep.png" width="50" />
+    <img id="bed8" src="Full_Sleep.png" width="50" />
+    <img id="bed9" src="Full_Sleep.png" width="50" />
+    <img id="bed10" src="Full_Sleep.png" width="50" />
+    <script>
+    
+    setInterval(myMethod, 500);
 
     function myMethod( )
     {
-                      const ferris = document.getElementById("ferris")
+                
+                const ferris = document.getElementById("ferris")
                 ferris.classList.add("rotate")
                 setTimeout(() => {
                     ferris.classList.remove("rotate")
-                }, 1000)
+                }, 500)
     }
         
         ComfyJS.onCommand = (user, command, message, flags, extra) => {
