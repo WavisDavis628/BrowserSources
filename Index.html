@@ -7,8 +7,8 @@
     <title>If you're not OBS, Go Away</title>
     <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
     <style>
-        .rotate {
-            animation: rotation .2s 1 linear;
+        .shake {
+            animation: shake 0.5s;
         }
         
 
@@ -20,6 +20,19 @@
             to {
                 transform: rotate(359deg);
             }
+        }
+        @keyframes shake {
+          0% { transform: translate(1px, 1px) rotate(0deg); }
+          10% { transform: translate(-1px, -2px) rotate(-1deg); }
+          20% { transform: translate(-5px, 0px) rotate(1deg); }
+          30% { transform: translate(5px, 2px) rotate(0deg); }
+          40% { transform: translate(1px, -1px) rotate(1deg); }
+          50% { transform: translate(-1px, 2px) rotate(-1deg); }
+          60% { transform: translate(-5px, 1px) rotate(0deg); }
+          70% { transform: translate(5px, 1px) rotate(-1deg); }
+          80% { transform: translate(-1px, -1px) rotate(1deg); }
+          90% { transform: translate(1px, 2px) rotate(0deg); }
+          100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
     </style>
 </head>
@@ -50,16 +63,16 @@
         
         setInterval(myMethod, 5000);
         function myMethod( ) {
-                const ferris = document.getElementById("food1")
-                ferris.classList.add("rotate")
+                var ferris = document.getElementById("food1")
+                ferris.classList.add("shake")
                 setTimeout(() => {
-                    ferris.classList.remove("rotate")
+                    ferris.classList.remove("shake")
                 }, 5000)
         }
         
         ComfyJS.onCommand = (user, command, message, flags, extra) => {
             if (command === "yeeclaw") {
-                const ferris = document.getElementById("ferris")
+                var ferris = document.getElementById("ferris")
                 ferris.classList.add("rotate")
                 setTimeout(() => {
                     ferris.classList.remove("rotate")
@@ -68,6 +81,45 @@
         }
         ComfyJS.Init("tomahawk628");
         
+        
+        
     </script>
 </body>
 </html>
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Variables</h2>
+
+<p>Create a variable, assign a value to it, and display it:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+
+var carName = "Volvo";
+var name = "demo";
+var counter = 1;
+
+var myTimer = setInterval(myTimer, 1800000);
+
+
+function myTimer() {
+	document.getElementById(name + counter).innerHTML = carName;
+    if(counter === 10) {
+    	clearInterval(myTimer);
+    }
+    counter++;
+}
+
+
+</script>
+
+</body>
+</html>
+-->
