@@ -22,31 +22,6 @@ if(isset($_POST['SubmitButton'])){ //check if form was submitted
     <input type="submit" name="SubmitButton"/>
   </form>   
 
-    <script>
-        
-        setInterval(myMethod, 5000);
-        function myMethod( ) {
-                var ferris = document.getElementById("food1")
-                ferris.classList.add("shake")
-                setTimeout(() => {
-                    ferris.classList.remove("shake")
-                }, 5000)
-        }
-        
-        ComfyJS.onCommand = (user, command, message, flags, extra) => {
-            if (command === "yeeclaw") {
-                var ferris = document.getElementById("ferris")
-                ferris.classList.add("rotate")
-                setTimeout(() => {
-                    ferris.classList.remove("rotate")
-                }, 1000)
-            }
-        }
-        ComfyJS.Init("tomahawk628");
-        
-        
-        
-    </script>
 </body>
 </html>
 <!--
