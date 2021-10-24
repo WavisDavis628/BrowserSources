@@ -16,16 +16,21 @@ if(isset($_POST['SubmitButton'])){ //check if form was submitted
     <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
 </head>
 <body>
+  <img id="pokemon" src="Full_Hunger.png" width="50" />
   <form action="" method="post">
-  <?php echo $message; ?>
     <input type="text" name="inputText"/>
-    <input type="submit" name="SubmitButton"/>
+    <button onclick="myFunction()">Load Pokemon</button>
   </form>   
-
+<script>
+  <img id="food1" src="Full_Hunger.png" width="50" />
+  function myMethod( ) {
+      var ferris = document.getElementById("pokemon")
+      ferris.src = "Full_Sleep.png"
+  }
+</script>
 </body>
 </html>
 <!--
-    <img id="food1" src="Full_Hunger.png" width="50" />
     <img id="bed10" src="Full_Sleep.png" width="50" />
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
 -->
