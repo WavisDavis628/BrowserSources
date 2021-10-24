@@ -7,15 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>If you're not OBS, Go Away</title>
     <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <img id="pokemon" src="Full_Hunger.png" width="50" />
-    <input type="text" name="inputText"/>
-    <button onclick="myFunction()">Load Pokemon</button>
+  <img id="pokemon" class="hidden" src="Full_Hunger.png" width="50" />
+    <input id="input" class="hidden" type="text" name="inputText"/>
+    <button id="button" onclick="myFunction()">Load Pokemon</button>
 <script> 
   function myFunction() {
-      var ferris = document.getElementById("pokemon")
-      ferris.src = "Full_Sleep.png"
+      var insert  = document.getElementById("input")
+      var button  = document.getElementById("button")
+      var pokemon = document.getElementById("pokemon")
+      
+      pokemon.src = insert.value + ".png"
+      
+      insert.classList.add("hidden")
+      button.classList.add("hidden")
+      pokemon.classList.remove("hidden")
   }
 </script>
 </body>
