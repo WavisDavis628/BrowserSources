@@ -9,10 +9,7 @@ I couldn't find any browser sources that had all Pokémon, so I made my own.
 //URL
 
 ### Usage
-Simply search for whatever Pokémon you need and copy the browser source given. If you're a big brain and wanna switch existing browser sources without visiting the website, the naming conventions are simply the Pokémon's name and 2 through 4 for direction or shiny. For Example,
-
-Pikachu = pikachu.gif, Shiny Pikachu = pikachu2.gif, Pikachu's back = pikachu3.gif, Shiny Pikachu's back = pikachu4.gif
-
+Simply search for whatever Pokémon you need and copy the browser source given.
 If anything is missing or there is any model you want added, let me know.
 
 ### Credit
