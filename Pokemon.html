@@ -1,1 +1,56 @@
 
+<!-- Inside of obs-browser-source/index.html -->
+<!DOCTYPE html>
+<?php
+$message = "";
+if(isset($_POST['SubmitButton'])){ //check if form was submitted
+  $input = $_POST['inputText']; //get input text
+  $message = "Success! You entered: ".$input;
+}    
+?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If you're not OBS, Go Away</title>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+</head>
+<body>
+  <form action="" method="post">
+  <?php echo $message; ?>
+    <input type="text" name="inputText"/>
+    <input type="submit" name="SubmitButton"/>
+  </form>   
+
+    <script>
+        
+        setInterval(myMethod, 5000);
+        function myMethod( ) {
+                var ferris = document.getElementById("food1")
+                ferris.classList.add("shake")
+                setTimeout(() => {
+                    ferris.classList.remove("shake")
+                }, 5000)
+        }
+        
+        ComfyJS.onCommand = (user, command, message, flags, extra) => {
+            if (command === "yeeclaw") {
+                var ferris = document.getElementById("ferris")
+                ferris.classList.add("rotate")
+                setTimeout(() => {
+                    ferris.classList.remove("rotate")
+                }, 1000)
+            }
+        }
+        ComfyJS.Init("tomahawk628");
+        
+        
+        
+    </script>
+</body>
+</html>
+<!--
+    <img id="food1" src="Full_Hunger.png" width="50" />
+    <img id="bed10" src="Full_Sleep.png" width="50" />
+    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+-->
