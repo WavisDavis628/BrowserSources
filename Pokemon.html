@@ -84,9 +84,8 @@
            }
         }
         
-        element.parentNode.removeChild(element);
-        while(kill[0]) {
-            kill[0].parentNode.removeChild(kill[0]);
+        for (var element of kill) {
+            element.parentNode.removeChild(element);
         }
         
     });
