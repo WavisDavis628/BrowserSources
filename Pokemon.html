@@ -21,6 +21,7 @@
         img.src = 'Images/Pokemon_Gifs/' + imgSource;
         img.classList.add("die")
         img.setAttribute("id",imgSource);
+        img.setAttribute("alt",imgSource);
         document.getElementById('body').appendChild(img);
     } 
     
@@ -54,7 +55,6 @@
             console.log(element);
             if(element.includes(this.value)) {
                 valid.push(element);
-                console.log(valid[0]);
             }
         }
         if(valid.length <= 100 && valid.length != 0) {
@@ -62,7 +62,16 @@
                 GFG_Fun(element);
             }
         }
-        console.log("Fin");
+        
+        var slides = document.getElementsByClassName("slide");
+        for (var element of slides) {
+           if(element.alt.includes(this.value)) {
+                //
+           } else {
+               element.parentNode.removeChild(element);
+           }
+        }
+        
     });
     
 
