@@ -17,7 +17,14 @@
   <img id="pokemon" class="hidden" src="Full_Hunger.png" width="50" />
     <input id="input" type="text" name="inputText"/>
     <button id="button" onclick="myFunction()">Load Pokemon</button>
+    
+    <p id="test"></p>
 <script> 
+    
+    var fs = require("fs");
+    var text = fs.readFileSync("extractlist.txt").toString('utf-8');
+    var textByLine = text.split("\n")
+    document.getElementById("test").innerHTML = textByLine;
   function myFunction() {
       var insert  = document.getElementById("input")
       var button  = document.getElementById("button")
