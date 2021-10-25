@@ -50,10 +50,10 @@
 
     change.addEventListener("input", function (e) {
         const valid = []
+        var input = this.value.toLowerCase();
         console.log(allImagesArray);
         for (var element of allImagesArray) {
-            console.log(element);
-            if(element.includes(this.value)) {
+            if(element.includes(input)) {
                 valid.push(element);
             }
         }
@@ -65,7 +65,7 @@
         
         var slides = document.getElementsByClassName("die");
         for (var element of slides) {
-           if(element.attr("alt").includes(this.value)) {
+           if(element.attr("alt").includes(input)) {
                 //
            } else {
                element.parentNode.removeChild(element);
