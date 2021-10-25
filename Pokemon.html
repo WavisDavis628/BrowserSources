@@ -24,24 +24,32 @@
         document.getElementById('body').appendChild(img);
     } 
     
-
+    
+    var allImagesArray = "";
+    
+    function readTextFile(file) {
         var rawFile = new XMLHttpRequest();
-        var allImagesArray = "";
-        rawFile.open("GET", "extractlist.txt", false);
+        var textByLine = "";
+        rawFile.open("GET", file, false);
         rawFile.onreadystatechange = function () {
             if(rawFile.readyState === 4) {
                 if(rawFile.status === 200 || rawFile.status == 0) {
                     var allText = rawFile.responseText;
                     var allImagesArray = allText.split("\n");
-                    GFG_Fun(allImagesArray[4000]);
+                    GFG_Fun(textByLine[4000]);
                 }
             }
         }
         rawFile.send(null);
+        return textByLine;
+    }
+    
+    readTextFile("extractlist.txt");
 
-    console.log(allImagesArray);
+
     change.addEventListener("input", function (e) {
         const valid = []
+        console.log(allImagesArray);
         for (var element of allImagesArray) {
             console.log(element);
             if(element.includes(this.value)) {
@@ -62,25 +70,6 @@
 </body>
 </html>
 <!--
-
-  function readTextFile(file) {
-        var rawFile = new XMLHttpRequest();
-        var textByLine = "";
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = function () {
-            if(rawFile.readyState === 4) {
-                if(rawFile.status === 200 || rawFile.status == 0) {
-                    var allText = rawFile.responseText;
-                    var textByLine = allText.split("\n");
-                    GFG_Fun(textByLine[4000]);
-                }
-            }
-        }
-        rawFile.send(null);
-        return textByLine;
-    }
-    
-    var allImagesArray = readTextFile("extractlist.txt");
 
     <img id="bed10" src="Full_Sleep.png" width="50" />
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
