@@ -30,13 +30,13 @@
 
         var rawFile = new XMLHttpRequest();
         var allImagesArray = "";
-        rawFile.open("GET", file, false);
+        rawFile.open("GET", "extractlist.txt", false);
         rawFile.onreadystatechange = function () {
             if(rawFile.readyState === 4) {
                 if(rawFile.status === 200 || rawFile.status == 0) {
                     var allText = rawFile.responseText;
                     var allImagesArray = allText.split("\n");
-                    GFG_Fun(textByLine[4000]);
+                    GFG_Fun(allImagesArray[4000]);
                 }
             }
         }
