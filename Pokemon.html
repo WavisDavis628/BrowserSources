@@ -52,7 +52,11 @@
         const valid = []
         var input = this.value.toLowerCase();
         
-        if(input == "") {
+        function isEmpty(str) {
+            return !str.trim().length;
+        }
+        
+        if(isEmpty(input)) {
             var slides = document.getElementsByClassName("die");
             for (var element of slides) {
                 element.parentNode.removeChild(element);
