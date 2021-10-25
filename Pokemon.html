@@ -35,6 +35,10 @@
                     var allText = rawFile.responseText;
                     var textByLine = allText.split("\n");
                     GFG_Fun(textByLine[4000]);
+                    for (var element of textByLine) {
+                        GFG_Fun(element);
+                        console.log(element);
+                    }
                 }
             }
         }
