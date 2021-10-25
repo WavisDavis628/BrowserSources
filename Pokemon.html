@@ -65,7 +65,7 @@
         
         var slides = document.getElementsByClassName("die");
         for (var element of slides) {
-           if(element.alt.includes(this.value)) {
+           if(element.attr("alt").includes(this.value)) {
                 //
            } else {
                element.parentNode.removeChild(element);
