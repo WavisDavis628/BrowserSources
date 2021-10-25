@@ -15,15 +15,14 @@
 </head>
 <body id = "body">
   <img id="pokemon" class="hidden" src="Full_Hunger.png" width="50" />
-    <input id="input" type="text" name="inputText"/>
-    <button id="button" onclick="myFunction()">Load Pokemon</button>
+  <input id="input" type="text" name="inputText"/>
     
 <script> 
 
     function GFG_Fun(imgSource) {
         var img = document.createElement('img');
         img.src = 'Images/Pokemon_Gifs/' + imgSource;
-        img.classList.add("hidden")
+        img.classList.add("die")
         img.setAttribute("id",imgSource);
         document.getElementById('body').appendChild(img);
     } 
@@ -45,23 +44,21 @@
             }
         }
         rawFile.send(null);
+        return textByLine;
     }
     
-    readTextFile("extractlist.txt");
-          
-
+    var allImagesArray = readTextFile("extractlist.txt");
     
-  function myFunction() {
-      var insert  = document.getElementById("input")
-      var button  = document.getElementById("button")
-      var pokemon = document.getElementById("pokemon")
-      
-      pokemon.src = insert.value + ".png"
-      
-      insert.classList.add("hidden")
-      button.classList.add("hidden")
-      pokemon.classList.remove("hidden")
-  }
+    change.addEventListener("input", function (e) {
+        alert(this.value);
+        for (var element of allImagesArray) {
+            if(element.includes("world")) {
+                GFG_Fun(element);
+            }
+        }   
+    });
+    
+
 </script>
 </body>
 </html>
