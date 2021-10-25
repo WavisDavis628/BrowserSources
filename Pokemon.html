@@ -18,13 +18,28 @@
     <input id="input" type="text" name="inputText"/>
     <button id="button" onclick="myFunction()">Load Pokemon</button>
     
-    <p id="test"></p>
 <script> 
     
-    var fs = require("fs");
-    var text = fs.readFileSync("extractlist.txt").toString('utf-8');
-    var textByLine = text.split("\n")
-    document.getElementById("test").innerHTML = textByLine;
+
+    function readTextFile(file) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function ()
+        {
+            if(rawFile.readyState === 4)
+            {
+                if(rawFile.status === 200 || rawFile.status == 0)
+                {
+                    var allText = rawFile.responseText;
+                    alert(allText);
+                }
+            }
+        }
+        rawFile.send(null);
+    }
+    
+    readTextFile("extractlist.txt");
+    
   function myFunction() {
       var insert  = document.getElementById("input")
       var button  = document.getElementById("button")
