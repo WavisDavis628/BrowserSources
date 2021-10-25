@@ -47,7 +47,7 @@
     
     readTextFile("extractlist.txt");
 
-
+    var activeTiles = 0;
     change.addEventListener("input", function (e) {
         const valid = []
         var input = this.value.toLowerCase();
@@ -60,17 +60,13 @@
             var slides = document.getElementsByClassName("die");
             while(slides[0]) {
                 slides[0].parentNode.removeChild(slides[0]);
+                activeTiles--
             }
         }
         
         for (var element of allImagesArray) {
             if(element.includes(input) && document.getElementById(element) == null) {
                 valid.push(element);
-            }
-        }
-        if(valid.length <= 100 && valid.length != 0) {
-            for (var element of valid) {
-                GFG_Fun(element);
             }
         }
         
@@ -81,7 +77,15 @@
                 //
            } else {
                kill.push(element);
+               activeTiles--
            }
+        }
+        
+        if(valid.length <= 100 - activeTiles && valid.length != 0) {
+            for (var element of valid) {
+                GFG_Fun(element);
+                activeTiles++
+            }
         }
         
         for (var element of kill) {
