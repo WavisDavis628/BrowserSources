@@ -45,8 +45,14 @@
     
     change.addEventListener("input", function (e) {
         alert(this.value);
+        var valid = []
         for (var element of allImagesArray) {
-            if(element.includes("world")) {
+            if(element.includes(this.value)) {
+                valid.push(element);
+            }
+        }
+        if(valid.length <= 20) {
+            for (var element of valid) {
                 GFG_Fun(element);
             }
         }
