@@ -29,7 +29,7 @@
     
 
         var rawFile = new XMLHttpRequest();
-        var textByLine = "";
+        var allImagesArray = "";
         rawFile.open("GET", file, false);
         rawFile.onreadystatechange = function () {
             if(rawFile.readyState === 4) {
@@ -41,7 +41,6 @@
             }
         }
         rawFile.send(null);
-        return textByLine;
 
     
     change.addEventListener("input", function (e) {
