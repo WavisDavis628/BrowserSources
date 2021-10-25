@@ -23,6 +23,8 @@
     function GFG_Fun(imgSource) {
         var img = document.createElement('img');
         img.src = 'Images/Pokemon_Gifs/' + imgSource;
+        img.classList.add("hidden")
+        img.setAttribute("id",imgSource);
         document.getElementById('body').appendChild(img);
     } 
     
