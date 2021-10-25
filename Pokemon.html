@@ -1,5 +1,3 @@
-
-<!-- Inside of obs-browser-source/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +41,7 @@
 
     
     change.addEventListener("input", function (e) {
-        var valid = []
+        const valid = []
         for (var element of allImagesArray) {
             if(element.includes(this.value)) {
                 valid.push(element);
