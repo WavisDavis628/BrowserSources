@@ -45,12 +45,9 @@
             <img src="Images/logo.jpg" class="col-centered full-img" id="" alt="">
             <div class="input-group input-group-lg">
                 <input id="change" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-            </div><!-- /input-group -->
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-    <!--
-<input id="change" type="text" name="inputText"/>
--->
+            </div>
+        </div>
+    </div>
     
 <script> 
 
@@ -66,7 +63,7 @@
         img.classList.add("img");
         
         span.classList.add("pokemonName");
-        span.innerHTML(imgSource);
+        span.innerHTML = imgSource;
         
         li.classList.add("die");
         li.classList.add("list-group-item");
