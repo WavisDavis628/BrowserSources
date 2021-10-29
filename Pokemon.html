@@ -40,7 +40,6 @@
     </style>
 </head>
 <body id = "body">
-    <button onclick="copyText('bingus')">Kill Me</button>
     <div class="row buffer">
         <div class="col-lg-6 col-centered">
             <img src="Images/logo.jpg" class="col-centered full-img" id="" alt="">
@@ -56,12 +55,25 @@
 <script> 
 
     function GFG_Fun(imgSource) {
+        
         var img = document.createElement('img');
+        var li = document.createElement('li');
+        var span = document.createElement('span');
+        
         img.src = 'Images/Pokemon_Gifs/' + imgSource;
-        img.classList.add("die")
         img.setAttribute("id",imgSource);
         img.setAttribute("alt",imgSource);
-        document.getElementById('body').appendChild(img);
+        img.classList.add("img");
+        
+        span.classList.add("pokemonName");
+        span.innerHTML(imgSource);
+        
+        li.classList.add("die");
+        li.classList.add("list-group-item");
+        
+        li.appendChild(img);
+        li.appendChild(span);
+        document.getElementById('slapon').appendChild(li);
     } 
     
     
@@ -140,10 +152,10 @@
     }
     
 </script>
-<ul class="list-group">
-  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="die img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
-  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="die img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
-  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="die img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
+<ul id="slapon" class="list-group">
+  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li><button onclick="copyText('bingus')">Kill Me</button>
+  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
+  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
 </ul>
 
 </body>
