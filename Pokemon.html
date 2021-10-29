@@ -37,6 +37,9 @@
             font-weight: bold;
             margin-left: 20px;
         }
+        .inset{
+            
+        }
     </style>
 </head>
 <body id = "body">
@@ -56,20 +59,24 @@
         var img = document.createElement('img');
         var li = document.createElement('li');
         var span = document.createElement('span');
+        var button = document.createElement('button');
         
         img.src = 'Images/Pokemon_Gifs/' + imgSource;
         img.setAttribute("id",imgSource);
         img.setAttribute("alt",imgSource);
         img.classList.add("img");
         
-        span.classList.add("pokemonName");
-        span.innerHTML = imgSource;
-        
         li.classList.add("die");
         li.classList.add("list-group-item");
         
+        span.classList.add("pokemonName");
+        span.innerHTML = imgSource;
+        
+        button.setAttribute("onclick","copyText('bingus')")
+        
         li.appendChild(img);
         li.appendChild(span);
+        li.appendChild(button);
         document.getElementById('slapon').appendChild(li);
     } 
     
