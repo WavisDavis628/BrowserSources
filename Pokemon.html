@@ -40,7 +40,7 @@
     </style>
 </head>
 <body id = "body">
-    <button onclick='copyText("bingus")'>Kill Me</button>
+    <button onclick="copyText('bingus')">Kill Me</button>
     <div class="row buffer">
         <div class="col-lg-6 col-centered">
             <img src="Images/logo.jpg" class="col-centered full-img" id="" alt="">
@@ -134,14 +134,6 @@
     });
     
     function copyText(myText) {
-      /* Get the text field */
-      //var copyText = document.getElementById("myInput");
-
-      /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999); /* For mobile devices */
-        
-      console.log(myText);
 
       /* Copy the text inside the text field */
       navigator.clipboard.writeText(myText);
