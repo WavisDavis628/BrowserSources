@@ -128,12 +128,25 @@
         }
         
     });
+    
+    function copyText(myText) {
+      /* Get the text field */
+      //var copyText = document.getElementById("myInput");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(myText);
+    }
 </script>
 
 <ul class="list-group">
   <li class="list-group-item clearfix"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="die img pull-left" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">  rufflet2.gif</span></li>
   <li class="list-group-item clearfix"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="die img pull-left" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">  rufflet2.gif</span></li>
   <li class="list-group-item clearfix"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="die img pull-left" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">  rufflet2.gif</span></li>
+    <button onclick='ClickStructList("bingus")'></button>
   <li class="list-group-item clearfix">Porta ac consectetur ac</li>
   <li class="list-group-item clearfix">Vestibulum at eros</li>
 </ul>
