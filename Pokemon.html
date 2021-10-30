@@ -129,12 +129,10 @@
         var slides = document.getElementsByClassName("die");
         const kill = []
         for (var element of slides) {
-           if(element.getAttribute('alt').includes(input)) {
-                console.log("bleh2");
-           } else {
-               kill.push(element);
-               activeTiles--
-           }
+            if(!element.getAttribute('alt').includes(input)) {
+                kill.push(element);
+                activeTiles--
+            }
         }
         
         if(valid.length <= 100 - activeTiles && valid.length != 0) {
@@ -147,7 +145,6 @@
         for (var element of kill) {
             element.parentNode.removeChild(element);
         }
-        console.log("bleh");
     });
     
     function copyText(myText) {
