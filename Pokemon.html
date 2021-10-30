@@ -73,7 +73,7 @@
         span.classList.add("pokemonName");
         span.innerHTML = imgSource;
         
-        button.setAttribute("onclick","copyText('bingus')")
+        button.setAttribute("onclick","copyText('bingus')");
         
         li.appendChild(img);
         li.appendChild(span);
@@ -129,8 +129,7 @@
         var slides = document.getElementsByClassName("die");
         const kill = []
         for (var element of slides) {
-            console.log(element);
-           if(element.alt.includes(input)) {
+           if(element.getAttribute('alt').includes(input)) {
                 console.log("bleh2");
            } else {
                kill.push(element);
@@ -160,8 +159,8 @@
 </script>
 <ul id="slapon" class="list-group">
     
-  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span><button onclick="copyText('bingus')">Kill Me</button></li>
-  <!--<li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
+  <!--<li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span><button onclick="copyText('bingus')">Kill Me</button></li>
+  <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
   <li class="list-group-item"><img src="Images/Pokemon_Gifs/rufflet2.gif" class="img" id="rufflet2.gif" alt="rufflet2.gif"><span class="pokemonName">rufflet2.gif</span></li>
 </ul>
 -->
