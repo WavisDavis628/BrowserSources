@@ -27,8 +27,8 @@ Support and check out some of the people who did the actual work in getting the 
 ### Usage
 This browser source in particular listens to your twitch chat mods
 
-## Shamless Self Plugging
+## Live Examples
 
-I'm gonna be live 24/7 all of November 2021, if you've got any questions or you want any browser sources made, hop in and let me know. I'm down for making more if you've got any cool ideas.
+If you got a cool idea for a browser source, let me know and maybe I'll make it.
 
-[Twitch](https://www.twitch.tv/scrimblo_male)
+[Pokemon/Hunger Bar](https://www.twitch.tv/scrimblo_male)
