@@ -54,6 +54,14 @@
     
 <script> 
 
+     function copyText(myText) {
+
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(myText);
+        
+      console.log(myText);
+    }
+    
     function GFG_Fun(imgSource) {
         
         var img = document.createElement('img');
@@ -151,14 +159,6 @@
             element.parentNode.removeChild(element);
         }
     });
-    
-    function copyText(myText) {
-
-      /* Copy the text inside the text field */
-      navigator.clipboard.writeText(myText);
-        
-      console.log(myText);
-    }
     
 </script>
 <ul id="slapon" class="list-group">
