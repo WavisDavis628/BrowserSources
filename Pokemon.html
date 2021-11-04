@@ -80,8 +80,10 @@
         
         span.classList.add("pokemonName");
         span.innerHTML = imgSource;
+        
+        var innerImg = "'" + imgSource + "'";
         //" + imgSource + "
-        button.setAttribute("onclick","copyText(\'" + imgSource + " \')");
+        button.setAttribute("onclick","copyText(" + innerImg + ")");
         button.innerHTML = "Copy Source";
         button.setAttribute("type","button");
         button.classList.add("btn");
