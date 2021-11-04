@@ -83,11 +83,12 @@
         
         var innerImg = "'" + imgSource + "'";
         //" + imgSource + "
-        button.setAttribute('onclick', 'copyText( " '+imgSource+' " )');
+        //button.setAttribute('onclick', 'copyText( " '+imgSource+' " )');
         button.innerHTML = "Copy Source";
         button.setAttribute("type","button");
         button.classList.add("btn");
         button.classList.add("btn-success");
+        button.addEventListener("click", copyText.bind(null, imgSource));
         //button.addEventListener("click", copyText("'" + imgSource + "'"));
         
         li.appendChild(img);
