@@ -86,7 +86,7 @@
         button.setAttribute("type","button");
         button.classList.add("btn");
         button.classList.add("btn-success");
-        //button.addEventListener("click", copyText(imgSource));
+        button.addEventListener("click", copyText("'" + imgSource + "'"));
         
         li.appendChild(img);
         li.appendChild(span);
