@@ -68,6 +68,7 @@
         var li = document.createElement('li');
         var span = document.createElement('span');
         var button = document.createElement('button');
+        var input = document.createElements('input');
         
         img.src = 'Images/Pokemon_Gifs/' + imgSource;
         img.setAttribute("id",imgSource);
@@ -82,14 +83,11 @@
         span.innerHTML = imgSource;
         
         var innerImg = "'" + imgSource + "'";
-        //" + imgSource + "
-        //button.setAttribute('onclick', 'copyText( " '+imgSource+' " )');
         button.innerHTML = "Copy Source";
         button.setAttribute("type","button");
         button.classList.add("btn");
         button.classList.add("btn-success");
         button.addEventListener("click", copyText.bind(null, imgSource));
-        //button.addEventListener("click", copyText("'" + imgSource + "'"));
         
         li.appendChild(img);
         li.appendChild(span);
@@ -174,8 +172,3 @@
 
 </body>
 </html>
-<!--
-
-    <img id="bed10" src="Full_Sleep.png" width="50" />
-    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
--->
