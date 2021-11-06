@@ -82,15 +82,19 @@
         span.classList.add("pokemonName");
         span.innerHTML = imgSource;
         
-        var innerImg = "'" + imgSource + "'";
+        var myURL = "https://silly-fermat-29a343.netlify.app/Images/Pokemon_Gifs/";
+        var browserSourceLink = myURL + imgSource;
         button.innerHTML = "Copy Source";
         button.setAttribute("type","button");
         button.classList.add("btn");
         button.classList.add("btn-success");
-        button.addEventListener("click", copyText.bind(null, imgSource));
+        button.addEventListener("click", copyText.bind(null, browserSourceLink));
         
+        input.setAttribute("value",browserSourceLink);
+
         li.appendChild(img);
         li.appendChild(span);
+        li.appendChild(input);
         li.appendChild(button);
         document.getElementById('slapon').appendChild(li);
     } 
